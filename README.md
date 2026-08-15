@@ -41,16 +41,6 @@ mysql -u root -p < sql/triggers_procedures.sql
 needed; it is not part of the setup sequence (its final section modifies data, so running
 it more than once will not reproduce identical results).
 
-### 2. (Optional) Regenerate the diagrams
-
-Requires Python 3 with `graphviz` installed (`pip install graphviz`, plus the system
-Graphviz package):
-
-```bash
-cd diagrams
-python3 build_erd.py
-```
-
 ## Design summary
 
 - **13 tables**: 9 strong/lookup entities, 2 weak entities (`CONSENT`, owned by `DONOR`;
